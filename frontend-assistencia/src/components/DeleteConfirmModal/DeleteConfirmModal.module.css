@@ -1,0 +1,150 @@
+/* ==========================================================================
+   Modern DeleteConfirmModal Styles
+   ========================================================================== */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: fadeIn 160ms ease-out;
+}
+
+.modal {
+  width: min(100%, 460px);
+  padding: 2rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  animation: slideUp 180ms ease-out;
+}
+
+.icon {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1.25rem;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-danger-bg);
+  border: 1px solid var(--color-danger-border);
+  color: var(--color-danger);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.content h2 {
+  margin: 0.25rem 0 0.5rem;
+  color: var(--color-text);
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.content p:last-child {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--color-danger);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.cancelButton,
+.confirmButton {
+  min-height: 2.625rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cancelButton {
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.cancelButton:hover:not(:disabled) {
+  background: var(--color-bg-alt);
+  border-color: #cbd5e1;
+}
+
+.confirmButton {
+  border: none;
+  background: var(--color-danger);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.confirmButton:hover:not(:disabled) {
+  background: var(--color-danger-hover);
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.4);
+}
+
+.cancelButton:active:not(:disabled),
+.confirmButton:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.cancelButton:focus-visible,
+.confirmButton:focus-visible {
+  outline: 2px solid var(--color-danger);
+  outline-offset: 2px;
+}
+
+.cancelButton:disabled,
+.confirmButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 1.5rem;
+  }
+  .actions {
+    flex-direction: column-reverse;
+  }
+  .cancelButton,
+  .confirmButton {
+    width: 100%;
+  }
+}
