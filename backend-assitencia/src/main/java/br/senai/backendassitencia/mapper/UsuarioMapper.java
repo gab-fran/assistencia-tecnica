@@ -1,6 +1,5 @@
 package br.senai.backendassitencia.mapper;
 
-
 import br.senai.backendassitencia.dto.usuario.UsuarioCreateDTO;
 import br.senai.backendassitencia.dto.usuario.UsuarioResponseDTO;
 import br.senai.backendassitencia.dto.usuario.UsuarioUpdateDTO;
@@ -22,5 +21,6 @@ public interface UsuarioMapper {
     @Mapping(target = "senha", ignore = true)
     @Mapping(target = "statusUsuario", ignore = true)
     @Mapping(target = "version", ignore = true)
+    @Mapping(target = "idUsuario", ignore = true)
     void updateEntity(UsuarioUpdateDTO dto, @MappingTarget Usuario usuario);
 }

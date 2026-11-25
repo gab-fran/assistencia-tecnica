@@ -17,6 +17,7 @@ public interface ClienteMapper {
     @Mapping(target = "idCliente", ignore = true)
     @Mapping(target = "version", ignore = true)
     @Mapping(target = "statusCliente", ignore = true)
+    @Mapping(target = "cpfHash", ignore = true)
     Cliente toEntity(ClienteCreateDTO dto);
 
     ClienteResponseDTO toResponse(Cliente cliente);
@@ -24,7 +25,9 @@ public interface ClienteMapper {
     ClienteResumoDTO toResumo(Cliente cliente);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    @Mapping(target = "idCliente", ignore = true)
     @Mapping(target = "statusCliente", ignore = true)
     @Mapping(target = "version", ignore = true)
+    @Mapping(target = "cpfHash", ignore = true)
     void updateEntity(ClienteUpdateDTO dto, @MappingTarget Cliente cliente);
 }
