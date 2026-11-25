@@ -1,8 +1,6 @@
 package br.senai.backendassitencia.service;
 
-import br.senai.backendassitencia.dto.equipamento.EquipamentoCreateDTO;
 import br.senai.backendassitencia.dto.equipamento.EquipamentoResponseDTO;
-import br.senai.backendassitencia.dto.equipamento.EquipamentoUpdateDTO;
 import br.senai.backendassitencia.entity.Equipamento;
 import br.senai.backendassitencia.exception.ResourceNotFoundException;
 import br.senai.backendassitencia.mapper.EquipamentoMapper;
@@ -22,10 +20,8 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)

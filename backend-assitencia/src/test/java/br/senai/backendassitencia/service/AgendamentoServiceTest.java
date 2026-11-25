@@ -1,8 +1,6 @@
 package br.senai.backendassitencia.service;
 
-import br.senai.backendassitencia.dto.agendamento.AgendamentoCreateDTO;
 import br.senai.backendassitencia.dto.agendamento.AgendamentoResponseDTO;
-import br.senai.backendassitencia.dto.agendamento.AgendamentoUpdateDTO;
 import br.senai.backendassitencia.entity.Agendamento;
 import br.senai.backendassitencia.enums.SituacaoAgendamento;
 import br.senai.backendassitencia.exception.ResourceNotFoundException;
@@ -27,7 +25,6 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
